@@ -29,7 +29,12 @@ pub struct TomcatOpts {
     #[structopt(name = "password", short, long, env = "DOCKER_PASSWORD")]
     password: Option<String>,
 
-    #[structopt(name = "app-root", long, env = "APP_ROOT")]
+    #[structopt(
+        name = "app-root",
+        long,
+        env = "APP_ROOT",
+        default_value = "/usr/local/tomcat/webapps/ROOT"
+    )]
     app_root: String,
 }
 

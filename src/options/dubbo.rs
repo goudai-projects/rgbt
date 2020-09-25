@@ -23,13 +23,7 @@ pub struct DubboOpts {
     #[structopt(name = "image", short, long, env = "IMAGE")]
     image: String,
 
-    #[structopt(
-        name = "module-name",
-        short,
-        long,
-        default_value = "/usr/local/tomcat/webapps/ROOT",
-        env = "MODULE_NAME"
-    )]
+    #[structopt(name = "module-name", short, long, env = "MODULE_NAME")]
     module_name: String,
 
     #[structopt(name = "username", short, long, env = "DOCKER_USERNAME")]
